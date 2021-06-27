@@ -31,17 +31,14 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3030/products")
+    fetch(`${process.env.REACT_APP_BASE_URL}/products`)
       .then(res => res.json())
       .then(data => setMasterData(data));
   }, []);
 
   return (
     <>
-      <Navigation
-        $primary={true}
-        favourites={favourites.length || favourites}
-      />
+      <Navigation $primary={true} favourites={favourites.length} />
 
       <Wrapper>
         <Container>

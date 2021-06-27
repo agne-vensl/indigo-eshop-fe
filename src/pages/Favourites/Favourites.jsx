@@ -32,7 +32,7 @@ const Favourites = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3030/products")
+    fetch(`${process.env.REACT_APP_BASE_URL}/add-product`)
       .then(res => res.json())
       .then(data => {
         const filteredData = data.filter(item => favourites.includes(item.id));
@@ -45,7 +45,7 @@ const Favourites = () => {
     <>
       <Navigation
         $primary={true}
-        favourites={favourites && (favourites.length || favourites)}
+        favourites={favourites && favourites.length}
       />
 
       <PageTitle>Your Favourites</PageTitle>
