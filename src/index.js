@@ -5,7 +5,7 @@ import "normalize.css";
 import "./index.css";
 
 if (!localStorage.getItem("indigo-visitor")) {
-  localStorage.setItem("indigo-visitor", JSON.stringify([1, 2, 3]));
+  localStorage.setItem("indigo-visitor", JSON.stringify([]));
 }
 
 ReactDOM.render(
