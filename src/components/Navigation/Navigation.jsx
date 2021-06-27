@@ -4,8 +4,6 @@ import Container from "../Container/Container";
 import TextLogo from "../TextLogo/TextLogo";
 import FavHeart from "../../components/FavHeart/FavHeart";
 
-const Heart = <FavHeart amount={5} title="Favourites" url="/favourites" />;
-
 const links = [
   {
     title: "Home",
@@ -17,7 +15,11 @@ const links = [
   },
 ];
 
-const Navigation = ({ $primary }) => {
+const Navigation = ({ $primary, favourites }) => {
+  const Heart = (
+    <FavHeart amount={favourites} title="Favourites" url="/favourites" />
+  );
+  
   return (
     <Container>
       <S.Header>
