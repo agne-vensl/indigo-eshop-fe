@@ -33,3 +33,9 @@ export const ProductList = styled.div`
     }
   }
 `;
+
+export const NoResults = styled.div`
+  color: #565656;
+  margin: 4rem auto !important;
+  text-align: center;
+`;
