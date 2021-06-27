@@ -32,7 +32,7 @@ const Favourites = () => {
   };
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BASE_URL}/add-product`)
+    fetch(`${process.env.REACT_APP_BASE_URL}/products`)
       .then(res => res.json())
       .then(data => {
         const filteredData = data.filter(item => favourites.includes(item.id));
