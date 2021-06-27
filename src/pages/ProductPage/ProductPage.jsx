@@ -17,7 +17,7 @@ const ProductPage = () => {
   const id = useParams().id;
 
   useEffect(() => {
-    fetch(`http://localhost:3030/product/${id}`)
+    fetch(`${process.env.REACT_APP_BASE_URL}/product/${id}`)
       .then(res => res.json())
       .then(data => setData(data[0]));
   }, [id]);
@@ -42,7 +42,7 @@ const ProductPage = () => {
     <>
       <Navigation
         $primary={true}
-        favourites={favourites && (favourites.length || favourites)}
+        favourites={favourites && favourites.length}
       />
 
       <PageTitle>Shop</PageTitle>
