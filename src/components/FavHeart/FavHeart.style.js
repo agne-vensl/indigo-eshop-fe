@@ -35,13 +35,11 @@ export const HeartCont = styled(NavLink)`
   &.active {
     & > * {
       color: #222;
-      fill: inherit;
     }
   }
 `;
 
 export const Heart = styled(FiHeart)`
   font-size: 1.75rem;
-  fill: #fff;
   transition: all 0.2s ease-in-out;
 `;
