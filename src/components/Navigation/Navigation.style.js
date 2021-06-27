@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink as Link } from "react-router-dom";
 
 export const Header = styled.header`
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 
   & > * {
     text-align: center;
