@@ -23,6 +23,7 @@ export const HeartCont = styled(NavLink)`
     left: 1.1rem;
     height: 0.85rem;
     width: 0.85rem;
+    min-width: fit-content;
     padding: 2px;
   }
 
