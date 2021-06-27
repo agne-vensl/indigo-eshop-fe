@@ -19,11 +19,11 @@ const Navigation = ({ $primary, favourites }) => {
   const Heart = (
     <FavHeart amount={favourites} title="Favourites" url="/favourites" />
   );
-  
+
   return (
     <Container>
       <S.Header>
-        <S.TopBarContainer>
+        <S.TopBarContainer $primary={$primary}>
           <S.LinksContainer>
             {links &&
               links.map(item => {
@@ -51,7 +51,9 @@ const Navigation = ({ $primary, favourites }) => {
           </S.LinksContainer>
 
           <S.LogoContainer $primary={$primary}>
-            <TextLogo>INDIGO</TextLogo>
+            <S.Link to="/">
+              <TextLogo>INDIGO</TextLogo>
+            </S.Link>
           </S.LogoContainer>
         </S.TopBarContainer>
 
